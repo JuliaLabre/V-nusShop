@@ -88,4 +88,73 @@ body{
     /* width: auto;
     height: auto; }*/
 
-  
+  /******************
+ * Menu principal *
+ ******************/
+/*
+#wrap>nav {
+    background-color: rgb(219, 157, 157);
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    font-size: 0.5rem;   
+}
+    
+
+/* #wrap>nav a {
+    padding: .7rem;
+    text-align: center;
+    color: rgb(255, 240, 255);
+    text-decoration: none;
+    transition: .25s;
+    font-size: .7rem;
+} */
+
+/* #wrap>nav a:hover {
+    color: rgb(161, 65, 161);
+}
+
+
+
+#wrap>nav i {
+    font-size: 2rem;
+} */
+
+
+
+/* Menu principal responsivo */
+
+/* @media screen and (min-width: 480px) {
+
+    #wrap>nav i {
+        font-size: 1.2rem;
+    }
+
+    #wrap>nav span {
+        display: inline;
+        margin-top: 0;
+    } } */
+   
+
+
+
+@media screen and (max-width: 767px) {
+    #wrap>nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color:white;
+      box-shadow: 0 -1px 12px #E7E0D8, 15%, 0.15;
+      width: 100%;
+      height: 4rem;
+      padding: 0 1rem;
+      display: grid;
+      align-content: center;
+      border-radius: 1.25rem 1.25rem 0 0;
+      transition: .4s;
+    }
+}
