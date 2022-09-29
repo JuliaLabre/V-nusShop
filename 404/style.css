@@ -1,0 +1,19 @@
+article img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 320px;
+}
+
+article p {
+    text-align: center;
+}
+
+
+
+.links a {
+    display: flex;
+    padding: .3rem;
+    align-items: center;
+}
+
