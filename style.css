@@ -1,0 +1,52 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/**************
+* Reset Geral *
+**************/
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: rgb(17, 1, 0);
+}
+
+a{
+    color: rgb(70, 130, 180);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(128, 35, 30);
+    text-decoration: none;
+}
+
+
+body{
+    background: #E7E0D8 fixed no-repeat;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    min-width: 280px;
+    max-width: 1024px;
+
+    margin: auto;
+} 
+/*Fim do reset*/
