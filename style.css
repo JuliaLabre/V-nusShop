@@ -50,3 +50,42 @@ body{
     margin: auto;
 } 
 /*Fim do reset*/
+
+/* barra de busca
+#divBusca{
+    background-color:#F7F6F2;
+    border:solid 2px #B75C47;
+    border-radius:10px;
+    width:300px;
+    height:32px;
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:.5rem;
+    font-size:1rem;
+    border:none;
+    height:2rem;
+    width:12.5rem;
+  }
+  
+  #btnBusca{
+    border:none;
+    float:left;
+    height:2rem;
+    border-radius:0 7px 7px 0;
+    width:4rem;
+    font-weight:bold;
+    background:#DABDA0;
+  }
+  
+  #divBusca img{
+    float:left;
+    max-width:1.6rem;
+    max-height:1.6rem;
+    opacity: 50%;
+    /* width: auto;
+    height: auto; }*/
+
+  
