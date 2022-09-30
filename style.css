@@ -8,8 +8,7 @@
     outline: none;
 }
 
-html,
-body {
+html, body{
     position: relative;
     padding: 0;
     margin: 0;
