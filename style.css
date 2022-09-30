@@ -114,31 +114,98 @@ body{
         color: #B75C47;    
     }
 
-    /* Menu bonitinho do lado */
+    /* Departamento e barra de busca */
 
+    #departments {
+        background-color:white;
+        justify-content:space-around;
+}
+#departments span {
+    margin: .5rem;
+    font-size: 1rem;
+}
+
+#departments a i {
+    font-size: 1.5rem;
+}
+
+
+
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    background-color: white;
+    border-color: #B75C47;
+    border-radius: 0.5rem;
+  }
   
-        
-    
-    /* #wrap>nav a {
-        padding: .5rem .7rem;
-        text-align: center;
-        color: rgb(255, 240, 255);
-        text-decoration: none;
-        transition: .25s;
-    }
-    
-    #wrap>nav a:hover {
-        /* background-color: rgb(255, 240, 255); */
-        /* color: rgb(250, 167, 250);
-    }
-    
-    #wrap>nav a:first-child {
-        margin-right: auto;
-    }
-    
-    #wrap>nav i {
-        font-size: 2rem;
-    }
-    
-   
-     */
+  input[type=text]:focus {
+    width: 100%;
+  }
+  /************************************
+ * Experimental - CSS Menu dropdown *
+ ************************************/
+
+#dropable {
+    position: absolute;
+    padding: 1rem;
+    background:  #E7E0D8;
+    border-radius: .5rem 0 0 .5rem;
+    z-index: 10;
+  
+    /* Menu oculto por padrão */
+    display: none;
+  
+    /* Altura do menu */
+    top: 11.9rem;
+  
+    /* Menu abre à partir da direita */
+    right: 0;
+  }
+  
+  /* Separador dos itens do menu */
+  #dropable hr {
+    border: none;
+    margin: 0;
+    border-bottom: 1px dotted #DABDA0;
+    background-color: #D9A782;
+  }
+  
+  #dropable nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #dropable nav a {
+    padding: 1rem;
+    color: #B75C47;    
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Arredonda bordas */
+  #dropable nav a:first-child {
+    border-radius: .5rem .5rem 0 0;
+  }
+  
+  #dropable nav a:last-child {
+    border-radius: 0 0 .5rem .5rem;
+  }
+  
+  #dropable nav i {
+    font-size: 1.2rem;
+  }
+  
+  #dropable nav span {
+    margin-left: .5rem;
+  }
+  
+  /* Animação do botão do menu */
+  #btnMenu i {
+    transition: .2s;
+  }
+  #btnMenu {
+    color:#B75C47;
+    text-align: justify;
+  }
