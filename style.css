@@ -1,12 +1,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/*Reset geral*/
 
-/**************
-* Reset Geral *
-**************/
-
-* {
+*{
     box-sizing: border-box;
     outline: none;
 }
@@ -14,67 +11,53 @@
 html,
 body {
     position: relative;
-    margin: 0;
     padding: 0;
+    margin: 0;
     height: 100%;
     width: 100%;
-
-    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    color: rgb(17, 1, 0);
+    color: #130302;
 }
 
 a{
-    color: rgb(70, 130, 180);
+    color: rgb(70, 130,180);
     text-decoration: none;
 }
 
 a:hover{
-    color: rgb(128, 35, 30);
+    color: #80231E;
     text-decoration: none;
 }
 
-
 body{
-    background: #fff5ea fixed no-repeat;
+    background: #E7E0D8 fixed;
 }
 
-#wrap {
+main{
+    min-width: 240px;
+    max-width: 1024px;
+    margin:auto;
+}
+
+#wrap{
     position: relative;
     width: 100%;
     height: 100%;
-
-    min-width: 280px;
-    max-width: 1300px;
-
     margin: auto;
-} 
-/*Fim do reset*/
+}
 
-/* Cabeçalho */
-
-#wrap>header {
-    border-radius: 0.5rem;
-    margin: 0 0 0.3rem 0;
-    display: flex;
-    align-items: center;
+#wrap>header{
     background-color: white;
+    display: flex;
 }
 
-#wrap>header img{
-    display: block;
-    margin: 0.7rem;
+#wrap>nav{
+    background-color: white;
+    align-items: center;
 }
 
-#wrap>header h1{
-    margin: 0;
-    font-size: 1.2rem;
-    color: rgb(128, 35, 30);
-    text-align: center;
-}
-
-#wrap>header small{
-    display: block;
-    font-size: 0.8rem;
-    font-weight: normal;
+#wrap>footer{
+    background-color: white;
 }
