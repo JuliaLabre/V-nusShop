@@ -25,16 +25,31 @@
         <nav>
            
     <a href="/" title="Página inicial"><i class="fa-fw fa-solid fa-house-chimney"></i><span>Início</span></a>
-           <a href=""><i class="fa-solid fa-heart fa-fw"></i><span>Favoritos</span></a>
-           <a href="/profile.html"><i class="fa-fw fa-solid fa-user"></i><span> Perfil</span></a>
+           <a href=""><i class="fa-regular fa-heart fa-fw"></i></i><span>Favoritos</span></a>
+           <a href="/profile.html"><i class="fa-regular fa-user fa-fw"></i><span> Perfil</span></a>
             <a href=""><i class="fa-brands fa-opencart fa-fw"></i><span>Carrinho</span></a>
       
        
         </nav>
-        <div id="dropable">
+        <!-- Top Navigation Menu -->
+<div class="topnav">
+    <input type="text" name="search" placeholder="Buscar...">
+    <a href="#home" class="active"></a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="#news">Lojas</a>
+      <a href="#contact">Contatos</a>
+      <a href="#about">Quem Somos</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars fa-fw"></i>
+    </a>
+  </div>
+        <!-- <div id="dropable">
         <nav>
             <a href="profile" title="Perfil de usuário"><i class="fa-regular fa-user fa-fw"></i><span>Perfil</span></a>
-            <!-- Separador -->
+         
             <hr>
             
             <a href="site" title="Sobre o site..."><i class="fa-solid fa-globe fa-fw"></i><span>Lojas</span></a>
@@ -43,19 +58,19 @@
             <a href="contacts" title="Faça contato"><i class="fa-solid fa-comments fa-fw"></i><span>Contatos</span></a>
             <a href="policies" title="Políticas de Privacidade"><i class="fa-solid fa-user-lock fa-fw"></i><span>Sua privacidade</span></a>
           </nav>
-          
-    </div>
+         
+    </div>  -->
     
           <!--
             Botão que controla o menu dropdown:
             Este botão só aparece em resoluções menores (mobile frist).
             Observe que 'href="menu"', para que seja identificado pelo JavaScript.
           -->
-          <a href="menu" id="btnMenu" title="Abre/fecha menu">
+          <!-- <a href="menu" id="btnMenu" title="Abre/fecha menu">
             <i class="fa-solid fa-list fa-fw"></i>
             <span>Menu</span>
-        </a>
-        <input type="text" name="search" placeholder="Buscar...">
+        </a> -->
+       
         </nav>
 
        
@@ -112,7 +127,7 @@
             <h3>ATENDIMENTO</h3>
             
             <div>&copy; 2022 Vênus Shop</div>
-            <a href="#top"><i class="fa-fw fa-solid fa-circle-up"></i></a>
+            <a href="#top"><i class="fa-brands fa-space-awesome fa-fw"></i></i></a>
         </footer>
 
     </div>

@@ -78,6 +78,8 @@ body{
     font-size: 0.8rem;
     font-weight: normal;
 }
+
+
 /* Menu responsivo */
 @media screen and (max-width: 576px) {
     #wrap>nav {
@@ -99,36 +101,24 @@ body{
         margin: .5rem;
         font-size: 1rem;
     }
+   
    }
 
   #wrap>nav{
   background-color:white;
   justify-content: space-between;
   align-items:center;
+  border-radius: 0.5rem;
+  
     }
     #wrap>nav a i {
         font-size: 1.5rem;
     }
 
     #wrap>nav a {
-        color: #B75C47;    
+        color: #B75C47;
+        
     }
-
-    /* Departamento e barra de busca */
-
-    #departments {
-        background-color:white;
-        justify-content:space-around;
-}
-#departments span {
-    margin: .5rem;
-    font-size: 1rem;
-}
-
-#departments a i {
-    font-size: 1.5rem;
-}
-
 
 
 input[type=text] {
@@ -141,71 +131,46 @@ input[type=text] {
   }
   
   input[type=text]:focus {
-    width: 100%;
+    width: 30%;
   }
-  /************************************
- * Experimental - CSS Menu dropdown *
- ************************************/
+  /* Style the navigation menu */
+.topnav {
+  margin-top: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
 
-#dropable {
-    position: absolute;
-    padding: 1rem;
-    background:  #E7E0D8;
-    border-radius: .5rem 0 0 .5rem;
-    z-index: 10;
-  
-    /* Menu oculto por padrão */
-    display: none;
-  
-    /* Altura do menu */
-    top: 11.9rem;
-  
-    /* Menu abre à partir da direita */
-    right: 0;
-  }
-  
-  /* Separador dos itens do menu */
-  #dropable hr {
-    border: none;
-    margin: 0;
-    border-bottom: 1px dotted #DABDA0;
-    background-color: #D9A782;
-  }
-  
-  #dropable nav {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #dropable nav a {
-    padding: 1rem;
-    color: #B75C47;    
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Arredonda bordas */
-  #dropable nav a:first-child {
-    border-radius: .5rem .5rem 0 0;
-  }
-  
-  #dropable nav a:last-child {
-    border-radius: 0 0 .5rem .5rem;
-  }
-  
-  #dropable nav i {
-    font-size: 1.2rem;
-  }
-  
-  #dropable nav span {
-    margin-left: .5rem;
-  }
-  
-  /* Animação do botão do menu */
-  #btnMenu i {
-    transition: .2s;
-  }
-  #btnMenu {
-    color:#B75C47;
-    text-align: justify;
-  }
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color:#B75C47;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color:#fff5ea ;
+  color:#B75C47;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color:transparent;
+  color: white;
+}
