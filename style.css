@@ -38,7 +38,7 @@ a {
 
 /* Pseudo classe ":hover" → Ao passar o mouse sobre o elemento */
 a:hover {
-    color: rgb(255, 69, 0);
+    color: rgb(128, 34, 30);
     text-decoration: underline;
 }
 
@@ -60,6 +60,10 @@ body {
     min-width: 280px;
     max-width: 1024px;
     margin: auto;
+}
+aside {
+    display: block;
+    text-decoration: none;
 }
 
 /*************
@@ -180,6 +184,13 @@ body {
 #wrap>main aside {
     margin: .5rem;
 }
+#wrap>main span {
+    display: block;
+}
+#wrap>main aside img {
+    border-radius: 5%;
+
+}
 
 /* Conteúdo responsivo */
 
@@ -198,7 +209,9 @@ body {
         min-width: 220px;
         max-width: 220px;
         margin-bottom: .5rem;
+        flex-direction: row;
     }
+
 }
 
 /**********
