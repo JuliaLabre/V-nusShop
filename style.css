@@ -96,7 +96,7 @@ header .search .fa-search{
     }
 }
 
-/* Menu responsivo*/
+/* Menu responsivo
 @media screen and (max-width: 432px){
 
     #wrap>nav{
@@ -135,13 +135,13 @@ header .search .fa-search{
     #wrap>nav a{
         color: #434978;
     }
-}
+}*/
 
 /***********
 * Conteúdo *
 ***********/
 main{
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
     min-width: 280px;
     max-width: 1024px;
     min-height: 100vh;
@@ -151,12 +151,27 @@ main{
     background: transparent;
 }
 
-main h2{
+main article img{
+    display: block;
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main h3{
     font-size: 2rem;
+    color: #212529;
+    display: block;
+}
+
+main small{
+    font-size: 16px;
     color: #212529;
 }
 
-main p{
+main p, span { 
     font-size: 16px;
     color: #212529;
 }
@@ -164,53 +179,96 @@ main p{
 /*********
 * Rodapé *
 *********/
+
 footer{
-    top: 0;
-    left: 0;
-    text-align: center;
-    margin: 0.5rem;
-    font-size: 0.7rem;
-    display: flex;
-    padding: 15px 10px;
-    flex-direction: column;
+    background-color: white;
 }
 
 /* Bloco superior */
+#fsup{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
 #fsup nav{
     display: flex;
     padding: 15px 10px;
-    justify-content: space-between;
-    background-color: white;
+    justify-content: space-around;
     color: #212529;
     margin-top: 0;
 }
 #fsup h4{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: left;
     margin-left: .8rem;
+}
+#fsup span{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 0.9rem; 
 }
 #fsup li{
     list-style: none;
     font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
 }
 #fsup i{
     color: #bb1919;
 }
 #fsup a{
     display: flex;
-    padding: .3rem;
+    /*padding: .3rem;*/
     color: #5a5959;
     text-decoration: none;
 }
 #fsup a:hover{
     text-decoration: underline;
+    cursor: pointer;
 }
 #fsup a span{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: .4rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+}
+#fsup li button {
+    position: relative;
+    background-color: #bb1919;
+    border-radius: 8px;
+    border: 0px;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: solid;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: .5rem;
+    margin-left: .4rem;
+}
+#fsup li button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+#fsup li button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 
 @media screen and (max-width: 696px){
