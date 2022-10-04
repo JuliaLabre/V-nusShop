@@ -195,6 +195,9 @@ aside h1{
     color: #212529;
     margin: auto;
 }
+aside :hover {
+    color: #bb1919;
+}
 @media (min-width: 575px) {
     .grid-container {
       display: flex;
