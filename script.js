@@ -22,15 +22,39 @@
  function runApp() {
 
     // Carrega a página inicial do site quando este iniciar:
-    loadPage('about');
+    loadPage('home');
   
     /**
      * jQuery → Quando houver click em um elemento <a>, execute o aplicativo 
      * "routerLink":
      **/
-    $('a').click(routerLink);
-  
+    $(document).on("click","a",routerLink);
+
+       // COOKIE → Verifica se o cookie sobre cookies existe...
+  if (getCookie('cookieAccept') != '') {
+
+    // COOKIE → Se existe, oculta mensagem de cookie:
+    $('#acCookies').hide();
+
+    // COOKIE → Se não...
+  } else {
+
+    // COOKIE → Se não existe, mostra a mensagem de cookie:
+    $('#acCookies').show();
   }
+  
+    // COOKIE → Monitora clique no botão de aceitar cookies:
+  $(document).on('click', '#accept', function () {
+
+    // COOKIE → Cria o cookie aceitando a mesagem sobre cookies:
+    setCookie('cookieAccept', 'accept', 365);
+
+    // COOKIE → Ocultar a mensagem de cookie:
+    $('#acCookies').hide();
+  });
+
+}
+
   
   /**
    * routerLink() → Aplicativo que processa cliques nos elementos <a>:
@@ -128,8 +152,38 @@
       $('title').html("Venus Shop - " + title);
   
     }
-  
+
+
+}
+ 
+  /**
+ * setCookie() → Cria cookies:
+ */
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+/**
+ * getCookie() → Lê o valor de um cookie:
+ */
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
   }
+  return "";
+}
   
   // jQuery → Executa aplicativo "runApp" quando o documento estiver pronto:
   $(document).ready(runApp);

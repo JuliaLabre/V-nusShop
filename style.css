@@ -234,3 +234,56 @@ footer{
     padding: 1rem 0 1rem 0;
     margin: 0 0 0 0;
 }
+
+/**************************
+ * Mensagem sobre cookies *
+ **************************/
+
+#acCookies {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;  
+}
+
+.cookieBody {
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.cookieBox {
+  background-color: rgb(255, 224, 255);
+  padding: .6rem;
+  border-radius: .5rem;
+  max-width: 988px;
+  margin: auto;
+}
+
+.cookieBox button {
+  display: block;
+  margin: auto;
+  margin-top: .5rem;
+  background: #B75C47;
+  color: white;
+  border: none;
+  box-shadow: 5px 5px 10px 0px ( 138, 138, 138, 1);
+  cursor: pointer;
+  padding: .25rem .5rem;
+  border-radius: .3rem;
+}
+
+.cookieBox button:hover {
+  background: #D9A782;
+}
+
+@media (min-width: 575px) {
+  .cookieBox {
+    display: flex;
+    align-items: center;
+  }
+
+  .cookieBox button {
+    margin: 0;
+    margin-left: 1rem;
+  }
+}
