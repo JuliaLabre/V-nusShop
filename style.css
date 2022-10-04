@@ -1,306 +1,276 @@
 
-@import url('/normalize.css');
 
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-/***************
- * Reset geral *
- ***************/
-* {
+/********
+* Reset *
+********/
+*{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    outline: none;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Reset dos elementos "root" (raiz) */
-html, body {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-
-    /* Fonte padrão do site, usando a fonte "Lato" do Google Fonts */
-    font-family: 'Lato', sans-serif;
-
-    /* Tamanho da fonte padrão → 1rem */
-    font-size: 16px;
-
-    /* Cor da fonte padrão */
-    color: rgb(55, 0, 55);
-}
-
-/* Reset dos links */
-a {
-    color: rgb(70, 130, 180);
-    text-decoration: none;
-}
-
-/* Pseudo classe ":hover" → Ao passar o mouse sobre o elemento */
-a:hover {
-    color: rgb(128, 34, 30);
-    text-decoration: underline;
-}
-
-/* Fundo da página */
-body {
-    background-attachment: fixed;
-    background-color: rgb(248, 166, 166);
-    /* background-image: url('/img/bg01.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
-}
-
-/* wrap */
-#wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-width: 280px;
-    max-width: 1024px;
-    margin: auto;
-}
-aside {
-    display: block;
-    text-decoration: none;
-}
-
-/*************
- * Cabeçalho *
- *************/
-
-#wrap>header {
-    border-radius: .5rem;
-    margin: .5rem;
-    background-attachment: fixed;
-    /* background-color: rgb(233, 72, 72); */
-    /* background-image: url('/img/bg01.jpg'); */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-}
-
-#wrap>header a {
-    display: block;
-    font-size: 4rem;
-    color: rgba(92, 19, 121, 0.507);
-    padding: .5rem 1rem .5rem .5rem;
-    /* -webkit-text-stroke: 2px rgb(232, 201, 201); */
-    
-
-}
-
-#wrap>header h1 {
-    margin: 0;
-    font-size: 1.6rem;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-#wrap>header small {
-    display: block;
-    font-size: .9rem;
-    font-weight: normal;
-}
-
-/******************
- * Menu principal *
- ******************/
-
-#wrap>nav {
-    background-color: rgb(219, 157, 157);
-    border-radius: .5rem;
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    position: fixed;
-    bottom: 0;
-    width: 100%; 
-    font-size: 0.5rem;   
-}
-    
-
-#wrap>nav a {
-    padding: .7rem;
-    text-align: center;
-    color: rgb(255, 240, 255);
-    text-decoration: none;
-    transition: .25s;
-    font-size: .7rem;
-}
-
-#wrap>nav a:hover {
-    color: rgb(161, 65, 161);
-}
-
-/* #wrap>nav a:first-child {
-    margin-right: auto;
-} */
-
-#wrap>nav i {
-    font-size: 2rem;
-}
-
-/* #wrap>nav span {
-    display: block;
-    margin-top: .3rem;
-} */
-
-/* Menu principal responsivo */
-
-@media screen and (min-width: 480px) {
-
-    #wrap>nav i {
-        font-size: 1.2rem;
-    }
-
-    #wrap>nav span {
-        display: inline;
-        margin-top: 0;
-    }
-
+body{
+    background: #E7E0D8 fixed;
 }
 
 /************
- * Conteúdo *
- ************/
-
-#wrap>main {
+* Cabeçalho *
+************/
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    background: white;
+}
+
+/* Logotipo */
+header .logo{
+    position: relative;
+    font-weight: 600;
+}
+
+/* Menu principal */
+header .navigation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+header .navigation li{
+    list-style: none;
+    margin: 0 10px;
+}
+header .navigation li a{
+    color: #212529;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+header .navigation li a:hover{
+    color: #bb1919;
+}
+
+/* Barra de pesquisa */
+header .search{
+    position: relative;
+    width: 300px;
+    height: 25px;
+}
+header .search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #bb1919;
+    background: transparent;
+    outline: none;
+    border: 1px solid #bb1919;
+    border-radius: 4px;
+    padding: 10px 0px 10px 5px;
+}
+header .search input::placeholder{
+    color: #909090;
+}
+header .search .fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #bb1919;
+    border-left: 1px solid #bb1919;
+    padding-left: 10px;
+}
+
+/* Cabeçalho responsivo */
+@media (max-width: 991px){
+    header{
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+}
+
+/* Menu responsivo*/
+@media screen and (max-width: 432px){
+
+    #wrap>nav{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 -1px 12px #DABDA0, 15%, 0.15;
+        width: 100%;
+        height: 5rem;
+        padding: 0.2rem 0.2rem;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+        justify-content: center;
+    }
+    
+    #wrap>nav span{
+        display: block;
+        margin: .3rem;
+        font-size: 0.8rem;
+    }
+    
+    #wrap>nav{
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.5rem;
+    }
+    
+    #wrap> nav a i{
+        font-size: 1rem;
+    }
+    
+    #wrap>nav a{
+        color: #434978;
+    }
+}
+
+/***********
+* Conteúdo *
+***********/
+main {
+    padding: 20px 0 0 0;
+    min-width: 280px;
+    max-width: 1024px;
+    min-height: 100vh;
+    display: flex;
+    margin: auto;
+    font-family: 'Roboto';
+    background: transparent;
+}
+
+main h2{
+    font-size: 2rem;
+    color: #212529;
+}
+
+main p, span { 
+    font-size: 16px;
+    color: #212529;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    background-color: transparent;
+    padding: 10px;
+    margin: auto;
+    justify-content: space-around;
+    
+  }
+  
+  .grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    margin: auto;
+  }
+span {
+display: block;
+}
+aside {
+    min-width: 320px;
+    max-width: 1024px;
+    min-height: 100vh;
+    max-height: 100vh;
+    margin: auto;
+}
+aside h1{
+    font-size: 2rem;
+    color: #212529;
+    margin: auto;
+}
+@media (min-width: 575px) {
+    .grid-container {
+      display: flex;
+      align-items: center;
+    }
+
+/*********
+* Rodapé *
+*********/
+footer{
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 0.7rem;
+    display: flex;
+    padding: 15px 10px;
     flex-direction: column;
 }
 
-#wrap>main article, #wrap>main aside {
-    background-color: white;
-    border-radius: .5rem;
-    overflow: auto;
-    margin: 0 .5rem;
-    padding: 0 1rem;
-}
-
-#wrap>main aside {
-    margin: .5rem;
-}
-#wrap>main span {
-    display: block;
-}
-#wrap>main aside img {
-    border-radius: 5%;
-
-}
-
-/* Conteúdo responsivo */
-
-@media screen and (min-width: 768px) {
-    #wrap>main {
-        flex-direction: row;
-    }
-
-    #wrap>main article {
-        flex-grow: 1;
-        margin-bottom: .5rem;
-    }
-
-    #wrap>main aside {
-        margin: 0 .5rem 0 0;
-        min-width: 220px;
-        max-width: 220px;
-        margin-bottom: .5rem;
-        flex-direction: row;
-    }
-
-}
-
-/**********
- * Rodapé *
- **********/
-
-#wrap>footer {
-    background-color: rgb(219, 157, 157);
-    border-radius: .5rem;
-    margin: .5rem;
-    margin-top: 0;
-    color: rgb(255, 240, 255);
-}
-
-/* Bloco superior do rodapé */
-
-#Copy {
+/* Bloco superior */
+#fsup nav{
     display: flex;
-    align-items: center;
+    padding: 15px 10px;
     justify-content: space-between;
+    background-color: white;
+    color: #212529;
+    margin-top: 0;
 }
-
-#Copy a {
-    padding: .5rem;
-    text-align: center;
-    color: rgb(255, 240, 255);
+#fsup h4{
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: .8rem;
+}
+#fsup li{
+    list-style: none;
+    font-size: 0.8rem;
+}
+#fsup i{
+    color: #bb1919;
+}
+#fsup a{
+    display: flex;
+    padding: .3rem;
+    color: #5a5959;
     text-decoration: none;
-    transition: .25s;
-    font-size: 1.5rem;
+}
+#fsup a:hover{
+    text-decoration: underline;
+}
+#fsup a span{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: .4rem;
+    font-size: 0.8rem;
 }
 
-#Copy a:hover {
-    color: rgb(161, 65, 161);
+@media screen and (max-width: 696px){
+    #fsup nav{
+        display: flex;
+        flex-direction: column;
+    }
+    #fsup a span{
+        font-size: 1rem;
+    }
 }
 
-/* Bloco inferior do rodapé */
-
+/* Bloco inferior */
 #finf {
     display: flex;
-    padding: .5rem;
-    justify-content: space-between;
-}
-
-#finf h4 {
-    margin: 0 0 .7rem 0;
-    font-weight: normal;
-}
-
-#finf nav a {
-    display: block;
-    padding: .3rem 0;
-    font-size: .9rem;
-    color: rgb(255, 240, 255);
-}
-
-#finf nav a:hover {
-    color: rgb(250, 167, 250);
-    text-decoration: none;
-}
-
-/* Rodapé responsivo */
-
-@media screen and (min-width: 426px) {
-
-    #finf {
-        justify-content: space-around;
-    }
-
-}
-
-/* 
-    Sticky Footer
-    Força o rodapé a aparecer sempre na parte inferior da tela,
-    aumentando automaticamente o height de <main>.
-*/
-
-#wrap {
-    display: flex;
-    flex-direction: column;
-}
-
-#wrap>main {
-    flex-grow: 1;
-}
-
-#wrap>main article {
-    flex-grow: 1;
-}
-
-#wrap>span {
-    font-size: 1px;
+    justify-content: center;
+    background-color: #bb1919;
+    color: white;
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+    padding: 1rem 0 1rem 0;
+    margin: 0 0 0 0;
 }
