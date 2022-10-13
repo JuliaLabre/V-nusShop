@@ -4,65 +4,243 @@
 /********
 * Reset *
 ********/
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     background: #E7E0D8 fixed;
 }
 
 /************
 * Cabeçalho *
+Precisa arrumar para versão desk
 ************/
-header{
+header {
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    padding: 15px 100px;
     background: white;
+    padding: 1rem 0 1rem 5rem;
 }
 
 /* Logotipo */
-header .logo{
+header .logo {
     position: relative;
     font-weight: 600;
 }
 
 /* Menu principal */
-header .navigation{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 10px 0;
-}
-header .navigation li{
-    list-style: none;
-    margin: 0 10px;
-}
-header .navigation li a{
-    color: #212529;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-header .navigation li a:hover{
-    color: #bb1919;
+@media screen and (min-width: 656px) {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a,
+    .dropbtn {
+        display: inline-block;
+        color: #80231E;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: #D9A782;
+    }
+
+    li.dropdown {
+        display: inline-block;
+
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #DABDA0;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: #80231E;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #menuMobile {
+        display: none;
+    }
 }
 
+/* Menu responsivo */
+@media screen and (max-width: 655px) {
+
+    header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #menuMobile {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 1.25rem 1.25rem 0 0;
+        background-color: white;
+        color: #B75C47;
+        padding: .3rem;
+
+    }
+    #menuMobile nav {
+        display: flex;
+  flex-direction: column;
+
+    }
+
+    #menuMobile nav i {
+        margin: .1rem;
+        list-style: none;
+        font-size: 1.5rem;
+
+    }
+    #menuMobile a {
+        color: #B75C47;
+        text-decoration: none;
+       
+    }
+    #dropMobile {
+        display: grid;
+    }
+    #dropMobile span{
+        margin:.2rem;
+        color:#B75C47;
+        text-decoration: underline;
+    }
+    #dropMobile hr{
+        border-top: 1px solid #DABDA0;
+    }
+    #dropMobile input:focus {
+        background-color: #bebbbb;
+    }
+    /* teste */
+#dropable img {
+    width: 2rem;
+}
+#dropable {
+    position: absolute;
+    padding: 1rem;
+    background:white;
+    border-radius: .5rem 0 0 .5rem;
+  z-index: 10;
+width: 100%;
+  /* Menu oculto por padrão */
+  display: none;
+
+  /* Altura do menu */
+  bottom: 2rem;
+
+  /* Menu abre à partir da direita */
+  left: 0;
+  
+}
+
+    #menuDesk {
+        display: none;
+    }
+
+    header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: white;
+    }
+
+    /* Logotipo */
+    header .logo {
+        position: relative;
+        font-weight: 600;
+
+    }
+
+    header .search {
+        width: 12rem;
+        height: 2rem;
+        position: relative;
+        margin: 0.5rem;
+
+    }
+
+    header .search input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #bb1919;
+        background: transparent;
+        outline: none;
+        border: 1px solid #bb1919;
+        border-radius: 4px;
+        padding: 10px 0px 10px 5px;
+    }
+
+    header .search input::placeholder {
+        color: #909090;
+    }
+
+    header .search .fa-search {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        color: #bb1919;
+        border-left: 1px solid #bb1919;
+        padding-left: 10px;
+    }
+
+
+}
+
+
 /* Barra de pesquisa */
-header .search{
+header .search {
     position: relative;
     width: 300px;
     height: 25px;
 }
-header .search input{
+
+header .search input {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,10 +253,12 @@ header .search input{
     border-radius: 4px;
     padding: 10px 0px 10px 5px;
 }
-header .search input::placeholder{
+
+header .search input::placeholder {
     color: #909090;
 }
-header .search .fa-search{
+
+header .search .fa-search {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -88,59 +268,12 @@ header .search .fa-search{
     padding-left: 10px;
 }
 
-/* Cabeçalho responsivo */
-@media (max-width: 991px){
-    header{
-        padding: 10px 20px;
-        flex-direction: column;
-    }
-}
-
-/* Menu responsivo
-@media screen and (max-width: 432px){
-
-    #wrap>nav{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        box-shadow: 0 -1px 12px #DABDA0, 15%, 0.15;
-        width: 100%;
-        height: 5rem;
-        padding: 0.2rem 0.2rem;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        border-radius: 1.25rem 1.25rem 0 0;
-        transition: .4s;
-        justify-content: center;
-    }
-    
-    #wrap>nav span{
-        display: block;
-        margin: .3rem;
-        font-size: 0.8rem;
-    }
-    
-    #wrap>nav{
-        background-color: white;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 0.5rem;
-    }
-    
-    #wrap> nav a i{
-        font-size: 1rem;
-    }
-    
-    #wrap>nav a{
-        color: #434978;
-    }
-}*/
+*/
 
 /***********
 * Conteúdo *
 ***********/
-main{
+main {
     padding: 10px 0 0 0;
     min-width: 280px;
     max-width: 1024px;
@@ -151,7 +284,7 @@ main{
     background: transparent;
 }
 
-main article img{
+main article img {
     display: block;
     width: 50%;
     max-width: 100%;
@@ -160,18 +293,19 @@ main article img{
     margin-right: auto;
 }
 
-main h3{
+main h3 {
     font-size: 2rem;
     color: #212529;
     display: block;
 }
 
-main small{
+main small {
     font-size: 16px;
     color: #212529;
 }
 
-main p, span { 
+main p,
+span {
     font-size: 16px;
     color: #212529;
 }
@@ -180,61 +314,70 @@ main p, span {
 * Rodapé *
 *********/
 
-footer{
+footer {
     background-color: white;
 }
 
 /* Bloco superior */
-#fsup{
+#fsup {
     width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: 30px;
 }
-#fsup nav{
+
+#fsup nav {
     display: flex;
     padding: 15px 10px;
     justify-content: space-around;
     color: #212529;
     margin-top: 0;
 }
-#fsup h4{
+
+#fsup h4 {
     font-size: 0.9rem;
     text-align: left;
     margin-left: .8rem;
 }
-#fsup span{
+
+#fsup span {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
 }
-#fsup li{
+
+#fsup li {
     list-style: none;
     font-size: 0.8rem;
     margin: 0;
     padding: 0;
 }
-#fsup i{
+
+#fsup i {
     color: #bb1919;
 }
-#fsup a{
+
+#fsup a {
     display: flex;
     /*padding: .3rem;*/
     color: #5a5959;
     text-decoration: none;
 }
-#fsup a:hover{
+
+#fsup a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-#fsup a span{
+
+#fsup a span {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: .4rem;
     font-size: 0.9rem;
 }
+
 #fsup li button {
     position: relative;
     background-color: #bb1919;
@@ -252,6 +395,7 @@ footer{
     margin-top: .5rem;
     margin-left: .4rem;
 }
+
 #fsup li button:after {
     content: "";
     background: #f1f1f1;
@@ -264,6 +408,7 @@ footer{
     opacity: 0;
     transition: all 0.8s
 }
+
 #fsup li button:active:after {
     padding: 0;
     margin: 0;
@@ -271,12 +416,13 @@ footer{
     transition: 0s
 }
 
-@media screen and (max-width: 696px){
-    #fsup nav{
+@media screen and (max-width: 696px) {
+    #fsup nav {
         display: flex;
         flex-direction: column;
     }
-    #fsup a span{
+
+    #fsup a span {
         font-size: 1rem;
     }
 }
@@ -292,3 +438,6 @@ footer{
     padding: 1rem 0 1rem 0;
     margin: 0 0 0 0;
 }
+
+
+
