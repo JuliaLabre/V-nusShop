@@ -96,8 +96,8 @@ header .search .fa-search{
     }
 }
 
-/* Menu responsivo
-@media screen and (max-width: 432px){
+/*Menu responsivo*/
+@media screen and (max-width: 760px){
 
     #wrap>nav{
         position: fixed;
@@ -135,7 +135,7 @@ header .search .fa-search{
     #wrap>nav a{
         color: #434978;
     }
-}*/
+}
 
 /***********
 * Conteúdo *
@@ -216,11 +216,14 @@ footer{
     padding: 0;
 }
 #fsup i{
+    display: inline-block;
+    text-align: center;
     color: #bb1919;
+    font-size: 2rem;
 }
 #fsup a{
     display: flex;
-    /*padding: .3rem;*/
+    padding: 4px;
     color: #5a5959;
     text-decoration: none;
 }
@@ -271,13 +274,47 @@ footer{
     transition: 0s
 }
 
-@media screen and (max-width: 696px){
+@media screen and (max-width: 780px){
+    #fsup{
+        margin: auto;
+        padding: 30px;
+    }
     #fsup nav{
         display: flex;
         flex-direction: column;
+        color: #212529;
     }
     #fsup a span{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    #fsup h4{
+        font-size: 1.1rem;
+        margin: 1.3rem;
+        text-align: center;
+        background-color: #ffe5c8;
+        border-radius: 3px;
+    }
+    #fsup i{
+    display: inline-block;
+    text-align: center;
+    }
+    #fsup span{
+        font-size: 1.1rem; 
+        text-align: center;
+    }
+    #fsup li img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    #fsup li button {
         font-size: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: solid;
     }
 }
 
