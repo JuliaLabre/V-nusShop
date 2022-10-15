@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="img/icon-do-site.png">
@@ -10,45 +11,110 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="" id="pageCSS">
 </head>
-<body>
-    
-    <header>
-        <a href="#" class="logo"><img src="img/logo-principal.png" width="100px" alt="Logotipo do site"></a>
-            <div id="wrap">   
-                <nav>
-                <ul class="navigation">
-                    <li><i class="fa-fw fa-solid fa-house-chimney"></i><a href="#" title="Página inicial"><span>Início</span></a></li>
-                    <li><i class="fa-regular fa-heart fa-fw"></i><a href="#" title="Seus favoritos"><span>Favoritos</span></a></li>
-                    <li><i class="fa-regular fa-user fa-fw"></i><a href="#" title="Seu perfil"><span>Perfil</span></a></li>
-                    <li><i class="fa-brands fa-opencart fa-fw"></i><a href="#" title="Carrinho de compras"><span>Carrinho</span></a></li>
-                </ul>
-                </nav> 
-            </div>      
 
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="img/logo-principal.png" width="100px" title="Logotipo do site"></a>
         <div class="search">
             <input type="text" placeholder="Busque por produtos, categorias e lojas...">
             <i class="fa fa-search" aria-hidden="true"></i>
         </div>
     </header>
-    <main id="content"></main>
 
-    <aside>
-        <aside>
-        <h3>Lojas mais acessadas:</h3>
-            <div class="grid-container">
-                <div class="card1"><img class="img" src="img/logo-variação.png" width="100px" alt="Logotipo da loja"><button>Costurices da Lu</button></div>
-                <div class="card2"><img class="img" src="img/logo-variação.png" width="100px" alt="Logotipo da loja"><button>Divina Crocheteira</buton></div>
-                <div class="card3"><img class="img" src="img/logo-variação.png" width="100px" alt="Logotipo da loja"><button>Semi Joias</button></div>
-                <div class="card4"><img class="img" src="img/logo-variação.png" width="100px" alt="Logotipo da loja"><button>AZUEN Modas</button></div>
-            </div>
-        
+    <div id="wrap">
+        <nav id=menuDesk>
+            <ul>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" title="Departamentos">Departamentos</a>
+                    <div class="dropdown-content">
+                        <a href="#" title="Artigos de Festa" >Artigos de Festa</a>
+                        <a href="#" title="Casa e Jardim">Casa e Jardim</a>
+                        <a href="#" title="Jóias">Jóias</a>
+                        <a href="#" title="Roupas">Roupas</a>
+                        <a href="#" title="Acessórios">Acessórios</a>
+                        <a href="#" title="Sapatos">Sapatos</a>
+                        <a href="#" title="Tecnologia">Tecnologia</a>
+                    </div>
+                </li>
+                <li><a href="" title="Lojas">Lojas</a></li>
+                <li><a href="" title="Crie sua loja">Crie sua loja</a></li>
+                <li><a href="" title="Quem somos...">Sobre nós</a></li>
+                <li><a href="" title="Faça contato">Faça Contato</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" title="Perfil de usuário">Perfil</a>
+                    <div class="dropdown-content">
+                        <a href="#" title="Seu Perfil">Meu Perfil</a>
+                        <a href="#" title="Favoritos">Favoritos</a>
+                        <a href="#" title="Rastreie seu pedido">Ratrear meu pedido</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!--
+    Botão que controla o menu dropdown:
+    Este botão só aparece em resoluções menores (mobile frist).
+    Observe que 'href="menu"', para que seja identificado pelo JavaScript.
+  -->
+
+        <div id="menuMobile">
+            <ul>
+                <li><a href="menu" id="btnMenu" title="Abre/fecha menu">
+                        <i class="fa-solid fa-bars fa-fw"></i>
+                    </a></li>
+                <!-- Menu dropdown: Adicione itens ao menu aqui. -->
+                <div id="dropable">
+                    <nav id="dropMobile">
+                        <div><img src="/img/icon-do-site.png"><a>Entre ou cadastre-se<a></div>
+                        <span>Departamentos</span>
+                        <a href="#" title="Artigos de Festa">Artigos de Festa</a>
+                        <a href="#" title="Casa e Jardim">Casa e Jardim</a>
+                        <a href="#" title="Jóias">Jóias</a>
+                        <a href="#" title="Roupas">Roupas</a>
+                        <a href="#" title="Acessórios">Acessórios</a>
+                        <a href="#" title="Sapatos">Sapatos</a>
+                        <a href="#" title="Tecnologia">Tecnologia</a>
+                        <hr>
+                        <a href="" title="Lojas">Lojas</a>
+                        <a href="" title="Crie sua loja">Crie sua loja</a>
+                        <a href="" title="Sobre nós">Sobre nós</a>
+                        <a href="" title="Faça Contato">Faça Contato</a>
+                        <span>Rastreie seu pedido:</span>
+                        <input type="text" placeholder="Digite o código aqui">
+
+                    </nav>
+                </div>
+                <li><a href="#" title="Seus favoritos"><i class="fa-regular fa-heart fa-fw"></a></i></li>
+                <li><a href="#" title="Seu perfil"><i class="fa-regular fa-user fa-fw"></i></a></li>
+                <li><a href="#" title="Suas compras"><i class="fa-brands fa-opencart fa-fw"></i></a></li>
+            </ul>
         </div>
+
+        <main id="content"></main>
+
+        <aside>
+            <aside>
+                <h3>Lojas mais acessadas:</h3>
+                <div class="grid-container">
+                    <div class="card1"><img class="img" src="img/logo-variação.png" width="100px"
+                            alt="Logotipo da loja"><button>Costurices da Lu</button></div>
+                    <div class="card2"><img class="img" src="img/logo-variação.png" width="100px"
+                            alt="Logotipo da loja"><button>Divina Crocheteira</buton>
+                    </div>
+                    <div class="card3"><img class="img" src="img/logo-variação.png" width="100px"
+                            alt="Logotipo da loja"><button>Semi Joias</button></div>
+                    <div class="card4"><img class="img" src="img/logo-variação.png" width="100px"
+                            alt="Logotipo da loja"><button>AZUEN Modas</button></div>
+                </div>
+
+    </div>
     </aside>
     <footer>
         <div id="fsup">
             <nav>
                 <ul>
-                    <li><img src="img/logo-variação.png" width="100px" alt="Logotipo do site"></li>
+                    <li><img src="img/logo-variação.png" width="100px" title="Logotipo do site"></li>
                 </ul>
                 <ul id="midia">
                     <li><span>ATENDIMENTOS ONLINE</span></li>
@@ -60,16 +126,22 @@
                     <li><a href="#" title=">"><i class="fa-brands fa-square-facebook fa-fw"></i></a></li>
                 </ul>
                 <ul id="pg">
-                    <li><h4>Pagamentos</h4></li>
+                    <li>
+                        <h4>Pagamentos</h4>
+                    </li>
                     <li><img src="img/meio_pagamento.png" width="150px" alt="Formas de pagamento"></li>
                 </ul>
                 <ul id="help">
-                    <li><h4>Ajuda</h4></li>
+                    <li>
+                        <h4>Ajuda</h4>
+                    </li>
                     <li><a href="#" title=">"><span>Dúvidas Frequentes</span></a></li>
                     <li><a href="#" title=">"><span>Contato</span></a></li>
                 </ul>
                 <ul id="shop">
-                    <li><h4>A Venus Shop</h4></li>
+                    <li>
+                        <h4>A Venus Shop</h4>
+                    </li>
                     <li><a href="#" title=">"><span>Sobre nós</span></a></li>
                     <li><a href="#" title=">"><span>Políticas de privacidade</span></a></li>
                     <li><a href="#" title=">"><span>Termos de Uso</span></a></li>
@@ -77,7 +149,9 @@
                     <li><a href="#" title=">"><span>Envio e entrega</span></a></li>
                 </ul>
                 <ul id="store">
-                    <li><h4>Sua loja na Venus Shop</h4></li>
+                    <li>
+                        <h4>Sua loja na Venus Shop</h4>
+                    </li>
                     <li>Gostaria de vender seus produtos com a gente?</li>
                     <li><input type="button" value="Criar minha loja virtual" onclick="msg()"></li>
                 </ul>
@@ -86,10 +160,11 @@
 
         <div id="finf">
             <div id="copy">&copy; 2022 VENUS SHOP, TODOS OS DIREITOS RESERVADOS</div>
-            <!--<span>&nbsp;</span>-->
+            
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/script.js"></script>
 </body>
+
 </html>

@@ -37,6 +37,12 @@ header .logo {
 
 /* Menu principal */
 @media screen and (min-width: 656px) {
+
+    #menuDesk {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-evenly;
+    }
     ul {
         list-style-type: none;
         margin: 0;
@@ -107,7 +113,7 @@ header .logo {
         padding: 0;
     }
 
-    #menuMobile {
+    div#menuMobile {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -115,35 +121,43 @@ header .logo {
         border-radius: 1.25rem 1.25rem 0 0;
         background-color: white;
         color: #B75C47;
-        padding: .3rem;
-        margin: 0;
-
+        
     }
-
-
-    #menuMobile i {
-        font-size: 1.5rem;
-    }
-
-
-    #menuMobile ul {
+    #menuMobile ul{
         display: grid;
         grid-auto-flow: column;
+        text-align: center;
+        align-content: space-between;
         list-style: none;
-        margin: 0;
+        padding: .3rem;
+
+
+    }
+
+    #menuMobile nav {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #menuMobile i {
+        margin: .1rem;
+        list-style: none;
+        font-size: 1.5rem;
+
     }
 
     #menuMobile a {
         color: #B75C47;
         text-decoration: none;
+        display: inline-flex;
+        align-content: space-between;
+        
 
     }
 
     #dropMobile {
         display: grid;
-        text-align: start;
-
-
     }
 
     #dropMobile span {
@@ -151,20 +165,30 @@ header .logo {
         color: #B75C47;
         text-decoration: underline;
         text-align: center;
-    }
-
-    .logo a {
-        margin-bottom: 4rem;
-        margin-left: 1rem;
-
+        
     }
 
     #dropMobile hr {
         border-top: 1px solid #DABDA0;
+    
     }
 
+    #dropMobile input{
+        color: #bb1919;
+        background: transparent;
+        outline: none;
+        border: 1px solid #bb1919;
+        border-radius: .3rem;
+        padding: .4rem 0 .4rem .3rem;
+        width: 15rem;
+        text-align: center;
+        align-self: center;
+        
+
+    }
     #dropMobile input:focus {
         background-color: #bebbbb;
+        
     }
 
     /* teste */
@@ -179,12 +203,16 @@ header .logo {
         border-radius: .5rem 0 0 .5rem;
         z-index: 10;
         width: 100%;
+        /* Menu oculto por padrão */
         display: none;
+
+        /* Altura do menu */
         bottom: 2rem;
+
+        /* Menu abre à partir da direita */
         left: 0;
 
     }
-
 
     #menuDesk {
         display: none;
@@ -198,10 +226,10 @@ header .logo {
         justify-content: space-around;
         align-items: center;
         background: white;
-        margin-top: .6rem;
     }
+}
 
-    /* Logotipo */
+    /* Logotipo  e barra de pesquisa*/
     header .logo {
         position: relative;
         font-weight: 600;
@@ -244,7 +272,19 @@ header .logo {
         padding-left: 10px;
     }
 
-    #dropMobile input {
+    /* Barra de pesquisa */
+    header .search {
+        position: relative;
+        width: 300px;
+        height: 25px;
+    }
+
+    header .search input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         color: #bb1919;
         background: transparent;
         outline: none;
@@ -253,47 +293,19 @@ header .logo {
         padding: 10px 0px 10px 5px;
     }
 
-    #dropMobile input::placeholder {
+    header .search input::placeholder {
         color: #909090;
     }
-}
 
-
-
-/* Barra de pesquisa */
-header .search {
-    position: relative;
-    width: 300px;
-    height: 25px;
-}
-
-header .search input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #bb1919;
-    background: transparent;
-    outline: none;
-    border: 1px solid #bb1919;
-    border-radius: 4px;
-    padding: 10px 0px 10px 5px;
-}
-
-header .search input::placeholder {
-    color: #909090;
-}
-
-header .search .fa-search {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
-    color: #bb1919;
-    border-left: 1px solid #bb1919;
-    padding-left: 10px;
-}
+    header .search .fa-search {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        color: #bb1919;
+        border-left: 1px solid #bb1919;
+        padding-left: 10px;
+    }
 
 /* Cabeçalho responsivo */
 @media (max-width: 991px) {
@@ -303,46 +315,6 @@ header .search .fa-search {
     }
 }
 
-/*Menu responsivo*/
-@media screen and (max-width: 760px) {
-
-    #wrap>nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        box-shadow: 0 -1px 12px #DABDA0, 15%, 0.15;
-        width: 100%;
-        height: 5rem;
-        padding: 0.2rem 0.2rem;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        border-radius: 1.25rem 1.25rem 0 0;
-        transition: .4s;
-        justify-content: center;
-    }
-
-    #wrap>nav span {
-        display: block;
-        margin: .3rem;
-        font-size: 0.8rem;
-    }
-
-    #wrap>nav {
-        background-color: white;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 0.5rem;
-    }
-
-    #wrap>nav a i {
-        font-size: 1rem;
-    }
-
-    #wrap>nav a {
-        color: #434978;
-    }
-}
 
 /***********
 * Conteúdo *
