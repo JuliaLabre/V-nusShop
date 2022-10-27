@@ -36,45 +36,36 @@ header .logo {
 }
 
 /* Menu principal */
-@media screen and (min-width: 656px) {
-
-    #menuDesk {
+@media screen and (min-width: 656px){
+    #menuDesk{
         display: grid;
         grid-auto-flow: column;
         justify-content: space-evenly;
     }
-    ul {
+    #menuDesk ul{
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
         background-color: transparent;
     }
-
-    li {
+    #menuDesk li{
         float: left;
     }
-
-    li a,
-    .dropbtn {
+    #menuDesk li a, .dropbtn{
         display: inline-block;
         color: #80231E;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
     }
-
-    li a:hover,
-    .dropdown:hover .dropbtn {
+    #menuDesk li a:hover, .dropdown:hover .dropbtn{
         background-color: #D9A782;
     }
-
-    li.dropdown {
+    #menuDesk li.dropdown{
         display: inline-block;
-
     }
-
-    .dropdown-content {
+    .dropdown-content{
         display: none;
         position: absolute;
         background-color: #DABDA0;
@@ -82,38 +73,31 @@ header .logo {
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
-
-    .dropdown-content a {
+    .dropdown-content a{
         color: #80231E;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         text-align: left;
     }
-
-    .dropdown-content a:hover {
+    .dropdown-content a:hover{
         background-color: #f1f1f1;
     }
-
-    .dropdown:hover .dropdown-content {
+    .dropdown:hover .dropdown-content{
         display: block;
     }
-
-    #menuMobile {
+    #menuMobile{
         display: none;
     }
-
 }
 
 /* Menu responsivo */
-@media screen and (max-width: 655px) {
-
-    header {
+@media screen and (max-width: 655px){
+    header{
         flex-direction: column;
         padding: 0;
     }
-
-    div#menuMobile {
+    div#menuMobile{
         position: fixed;
         bottom: 0;
         left: 0;
@@ -121,7 +105,6 @@ header .logo {
         border-radius: 1.25rem 1.25rem 0 0;
         background-color: white;
         color: #B75C47;
-        
     }
     #menuMobile ul{
         display: grid;
@@ -130,49 +113,34 @@ header .logo {
         align-content: space-between;
         list-style: none;
         padding: .3rem;
-
-
     }
-
-    #menuMobile nav {
+    #menuMobile nav{
         display: flex;
         flex-direction: column;
-
     }
-
-    #menuMobile i {
+    #menuMobile i{
         margin: .1rem;
         list-style: none;
         font-size: 1.5rem;
-
     }
-
-    #menuMobile a {
+    #menuMobile a{
         color: #B75C47;
         text-decoration: none;
         display: inline-flex;
         align-content: space-between;
-        
-
     }
-
-    #dropMobile {
+    #dropMobile{
         display: grid;
     }
-
-    #dropMobile span {
+    #dropMobile span{
         margin: .2rem;
         color: #B75C47;
         text-decoration: underline;
         text-align: center;
-        
     }
-
-    #dropMobile hr {
+    #dropMobile hr{
         border-top: 1px solid #DABDA0;
-    
     }
-
     #dropMobile input{
         color: #bb1919;
         background: transparent;
@@ -183,20 +151,16 @@ header .logo {
         width: 15rem;
         text-align: center;
         align-self: center;
-        
-
     }
-    #dropMobile input:focus {
+    #dropMobile input:focus{
         background-color: #bebbbb;
-        
     }
 
     /* teste */
-    #dropable img {
+    #dropable img{
         width: 2rem;
     }
-
-    #dropable {
+    #dropable{
         position: absolute;
         padding: 1rem;
         background: white;
@@ -205,107 +169,47 @@ header .logo {
         width: 100%;
         /* Menu oculto por padrão */
         display: none;
-
         /* Altura do menu */
         bottom: 2rem;
-
         /* Menu abre à partir da direita */
         left: 0;
-
     }
-
-    #menuDesk {
+    #menuDesk{
         display: none;
-    }
-
-    header {
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background: white;
     }
 }
 
-    /* Logotipo  e barra de pesquisa*/
-    header .logo {
-        position: relative;
-        font-weight: 600;
-
-    }
-
-    header .search {
-        width: 12rem;
-        height: 2rem;
-        position: relative;
-        margin: 0.5rem;
-
-    }
-
-    header .search input {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        color: #bb1919;
-        background: transparent;
-        outline: none;
-        border: 1px solid #bb1919;
-        border-radius: 4px;
-        padding: 10px 0px 10px 5px;
-    }
-
-    header .search input::placeholder {
-        color: #909090;
-    }
-
-    header .search .fa-search {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 10px;
-        color: #bb1919;
-        border-left: 1px solid #bb1919;
-        padding-left: 10px;
-    }
-
-    /* Barra de pesquisa */
-    header .search {
-        position: relative;
-        width: 300px;
-        height: 25px;
-    }
-
-    header .search input {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        color: #bb1919;
-        background: transparent;
-        outline: none;
-        border: 1px solid #bb1919;
-        border-radius: 4px;
-        padding: 10px 0px 10px 5px;
-    }
-
-    header .search input::placeholder {
-        color: #909090;
-    }
-
-    header .search .fa-search {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 10px;
-        color: #bb1919;
-        border-left: 1px solid #bb1919;
-        padding-left: 10px;
-    }
+/*Barra de pesquisa*/
+header .search{
+    position: relative;
+    width: 300px;
+    height: 25px;
+}
+header .search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #bb1919;
+    background: transparent;
+    outline: none;
+    border: 1px solid #bb1919;
+    border-radius: 4px;
+    padding: 10px 0px 10px 5px;
+}
+header .search input::placeholder{
+    color: #909090;
+}
+header .search .fa-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #bb1919;
+    border-left: 1px solid #bb1919;
+    padding-left: 10px;
+}
 
 /* Cabeçalho responsivo */
 @media (max-width: 991px) {
@@ -407,71 +311,71 @@ aside :hover {
 /*********
 * Rodapé *
 *********/
-footer {
-    top: 0;
-    left: 0;
-    text-align: center;
-    margin: 0.5rem;
-    font-size: 0.7rem;
-    display: flex;
-    padding: 15px 10px;
-    flex-direction: column;
-}
 
-/* Bloco superior */
-#fsup nav {
+footer{
+    background-color: white;
+}
+#fsup{
+    width: 100%;
+    max-width: 1200px;
+    margin:auto;
+    padding: 5px 0 0 0;
+}
+#fsup nav{
     display: flex;
     padding: 15px 10px;
-    justify-content: space-between;
-    background-color: white;
+    justify-content: space-around;
     color: #212529;
     margin-top: 0;
 }
-
-#fsup h4 {
-    font-size: 0.8rem;
+#fsup h4{
+    font-size: 0.9rem;
     text-align: left;
     margin-left: .8rem;
 }
-
-#fsup li {
+#fsup span{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+#fsup li{
     list-style: none;
     font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
 }
-
-#fsup i {
+#fsup i{
     display: inline-block;
     text-align: center;
-    color: #bb1919;
     font-size: 2rem;
+    color: #bb1919;
 }
-
-#fsup a {
-    display: flex;
+#fsup a{
     padding: 4px;
+    display: flex;
     color: #5a5959;
     text-decoration: none;
 }
-
-#fsup a:hover {
+#fsup a:hover{
     text-decoration: underline;
+    cursor: pointer;
+    background-color: white;
 }
-
-#fsup a span {
+#fsup a span{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: .4rem;
     font-size: 0.9rem;
 }
-
-#fsup li button {
+#fsup li input{
     position: relative;
     background-color: #bb1919;
     border-radius: 8px;
     border: 0px;
     font-size: 0.9rem;
-    color: #FFFFFF;
+    color: white;
     padding: 10px;
     width: 80%;
     text-align: center;
@@ -480,82 +384,28 @@ footer {
     overflow: hidden;
     cursor: pointer;
     margin-top: .5rem;
-    margin-left: .4rem;
+    margin-left: .4rem
 }
-
-#fsup li button:after {
+#fsup li input:after{
     content: "";
     background: #f1f1f1;
     display: block;
-    position: absolute;
+    position:absolute;
     padding-top: 300%;
     padding-left: 350%;
     margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 0.8s
+    transition: all 0.8s;
 }
-
-#fsup li button:active:after {
+#fsup li input:active:after{
     padding: 0;
     margin: 0;
     opacity: 1;
-    transition: 0s
+    transition: 0s;
 }
 
-@media screen and (max-width: 780px) {
-    #fsup {
-        margin: auto;
-        padding: 30px;
-    }
-
-    #fsup nav {
-        display: flex;
-        flex-direction: column;
-        color: #212529;
-    }
-
-    #fsup a span {
-        font-size: 1.1rem;
-        text-align: center;
-    }
-
-    #fsup h4 {
-        font-size: 1.1rem;
-        margin: 1.3rem;
-        text-align: center;
-        background-color: #ffe5c8;
-        border-radius: 3px;
-    }
-
-    #fsup i {
-        display: inline-block;
-        text-align: center;
-    }
-
-    #fsup span {
-        font-size: 1.1rem;
-        text-align: center;
-    }
-
-    #fsup li img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 60%;
-    }
-
-    #fsup li button {
-        font-size: 1rem;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        text-decoration: solid;
-    }
-}
-
-/* Bloco inferior */
-#finf {
+#finf{
     display: flex;
     justify-content: center;
     background-color: #bb1919;
@@ -617,4 +467,47 @@ footer {
     margin: 0;
     margin-left: 1rem;
   }
+}
+
+@media screen and (max-width: 780px){
+    #fsup{
+        margin:auto;
+        padding: 30px;
+    }
+    #fsup nav{
+        display:flex;
+        flex-direction: column;
+    }
+    #fsup a span{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    #fsup h4{
+        font-size: 1.1rem;
+        margin: 1.3rem;
+        text-align: center;
+        background-color: #ffe5c8;
+        border-radius: 3px;
+    }
+    #fsup i{
+        display: inline-block;
+        text-align: center;
+    }
+    #fsup span{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    #fsup li img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    #fsup li input{
+        font-size: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: solid;
+    }
 }
