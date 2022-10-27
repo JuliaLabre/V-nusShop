@@ -306,6 +306,9 @@ aside :hover {
         display: flex;
         align-items: center;
     }
+    #finf {
+        margin: 0 0 0 0;
+    }
 }
 
 /*********
@@ -413,7 +416,7 @@ footer{
     font-size: 0.6rem;
     letter-spacing: 0.5px;
     padding: 1rem 0 1rem 0;
-    margin: 0 0 0 0;
+    margin: 0 0 3rem 0;
 }
 
 /**************************

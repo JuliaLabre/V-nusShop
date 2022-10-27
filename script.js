@@ -21,41 +21,9 @@
  */
  function runApp() {
 
-    // Carrega a página inicial do site quando este iniciar:
-    loadPage('home');
-  
-    /**
-     * jQuery → Quando houver click em um elemento <a>, execute o aplicativo 
-     * "routerLink":
-     **/
-    $(document).on("click","a",routerLink);
+  // Carrega a página inicial do site quando este iniciar:
+  loadPage('home');
 
-       // COOKIE → Verifica se o cookie sobre cookies existe...
-  if (getCookie('cookieAccept') != '') {
-
-    // COOKIE → Se existe, oculta mensagem de cookie:
-    $('#acCookies').hide();
-
-    // COOKIE → Se não...
-  } else {
-
-    // COOKIE → Se não existe, mostra a mensagem de cookie:
-    $('#acCookies').show();
-  }
-  
-    // COOKIE → Monitora clique no botão de aceitar cookies:
-  $(document).on('click', '#accept', function () {
-
-    // COOKIE → Cria o cookie aceitando a mesagem sobre cookies:
-    setCookie('cookieAccept', 'accept', 365);
-
-    // COOKIE → Ocultar a mensagem de cookie:
-    $('#acCookies').hide();
-  });
-
-}
-
-  
   /**
    * jQuery → Quando houver click em um elemento <a>, execute o aplicativo 
    * "routerLink":
@@ -91,7 +59,7 @@
     $('#acCookies').hide();
   });
 
-
+}
 
 /**
  * routerLink() → Aplicativo que processa cliques nos elementos <a>:
