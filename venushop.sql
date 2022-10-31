@@ -11,11 +11,33 @@ CREATE TABLE users (
     user_password VARCHAR (255) NOT NULL,
     user_adress VARCHAR (255) NOT NULL,
     user_billing VARCHAR (255) NOT NULL,
-    user_photo VARCHAR (255) NOT NULL,
+    user_photo VARCHAR (255),
     user_type ENUM ('user','admin','shop','deleted') DEFAULT 'user',
     last_login DATETIME,
     user_status ENUM ('online','offline','banned','deleted') DEFAULT 'online'
 );
+
+-- INSERT INTO users(
+--     user_name,
+--     user_birth,
+--     user_reg,
+--     user_email, 
+--     user_password,
+--     user_adress,
+--     user_billing,
+--     user_photo   
+-- )
+-- VALUES (
+--     'Marineuza Siriliano',
+--      '2002-03-21',
+--     '13333333333',
+--     'mari@neuza.com',
+--     SHA1('senha123'),
+--     '23000000',
+--     '23000000',
+--     'https://randomuser.me/api/portraits/women/72.jpg'
+-- );
+
 CREATE TABLE products (
     prod_id INT PRIMARY KEY AUTO_INCREMENT,
     shop INT NOT NULL,
@@ -56,12 +78,14 @@ CREATE TABLE delivery (
     status_date TIMESTAMP,
     FOREIGN KEY (cod_pay) REFERENCES request (req_id)
 );
--- ESTÁ COM ERRO A ULTIMA TABELA, PRECISA ARRUMAR
-CREATE TABLE COMMENT (
+
+CREATE TABLE comments (
     com_id INT PRIMARY KEY AUTO_INCREMENT,
-    com_date TIMESTAMP,
-    com_user DATE,
-    content LONGTEXT NOT NULL,
-    com_status ENUM ('online','offline','banned','deleted') DEFAULT 'online',
-    FOREIGN KEY (com_user) REFERENCES user (user_id)
+    com_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    cautor INT NOT NULL,
+    products INT NOT NULL,
+    comment TEXT NOT NULL,
+    com_status ENUM('online','offline','banned','deleted') DEFAULT 'online',
+    FOREIGN KEY (cautor) REFERENCES users (user_id),
+    FOREIGN KEY (products) REFERENCES products ( prod_id)
 );
